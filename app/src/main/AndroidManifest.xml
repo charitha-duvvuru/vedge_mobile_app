@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Restart"
+        tools:targetApi="31">
+        <activity
+            android:name=".aptnotes"
+            android:exported="false" />
+        <activity
+            android:name=".handout"
+            android:exported="false" />
+        <activity
+            android:name=".solutions"
+            android:exported="false" />
+        <activity
+            android:name=".calenders"
+            android:exported="false" />
+        <activity
+            android:name=".grammar"
+            android:exported="false" />
+        <activity
+            android:name=".company"
+            android:exported="false" />
+        <activity
+            android:name=".lang"
+            android:exported="false" />
+        <activity
+            android:name=".technical"
+            android:exported="false" />
+        <activity
+            android:name=".softskills"
+            android:exported="false" />
+        <activity
+            android:name=".coding"
+            android:exported="false" />
+        <activity
+            android:name=".hr"
+            android:exported="false" />
+        <activity
+            android:name=".aptitude"
+            android:exported="false" />
+        <activity
+            android:name=".event1"
+            android:exported="false" />
+        <activity
+            android:name=".clubtypes"
+            android:exported="false" />
+        <activity
+            android:name=".socialmedia"
+            android:exported="false" />
+        <activity
+            android:name=".events"
+            android:exported="false" />
+        <activity
+            android:name=".acheivers"
+            android:exported="false" />
+        <activity
+            android:name=".clubs"
+            android:exported="false" />
+        <activity
+            android:name=".placement"
+            android:exported="false" />
+        <activity
+            android:name=".menu"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

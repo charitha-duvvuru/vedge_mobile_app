@@ -1,0 +1,236 @@
+<html>
+<head>
+    <link rel="stylesheet" href="accstyle.css">
+</head>
+<body>
+<div style="padding: 15px 15px 15px 15px;">
+    <p style="font-size: 30px; text-align: center;"><span style="color: #78e39b;"><strong>ACCENTURE</strong></span></p>
+    <p style="text-align: justify;">&nbsp;</p>
+    <p style="text-align: justify;">1. The function accepts two positive integers &lsquo;r&rsquo; and &lsquo;unit&rsquo; and a positive integer array &lsquo;arr&rsquo; of size &lsquo;n&rsquo; as its argument &lsquo;r&rsquo; represents the number of rats present in an area, &lsquo;unit&rsquo; is the amount of food each rat consumes and each ith element of array &lsquo;arr&rsquo; represents the amount of food present in &lsquo;i+1&rsquo; house number, where 0 &lt;= i</p>
+    <p style="text-align: justify;"><strong>Note:</strong></p>
+    <ul style="text-align: justify;">
+        <li>Return -1 if the array is null</li>
+        <li>Return 0 if the total amount of food from all houses is not sufficient for all the rats.</li>
+        <li>Computed values lie within the integer range.</li>
+    </ul>
+    <p style="text-align: justify;"><strong>Example:</strong></p>
+    <p style="text-align: justify;"><strong>Input:</strong></p>
+    <ul style="text-align: justify;">
+        <li>r: 7</li>
+        <li>unit: 2</li>
+        <li>n: 8</li>
+        <li>arr: 2 8 3 5 7 4 1 2</li>
+    </ul>
+    <p style="text-align: justify;"><strong>Output:</strong></p>
+    <p style="text-align: justify;">4</p>
+    <p style="text-align: justify;"><strong>Explanation:<br /> </strong>Total amount of food required for all rats = r * unit= 7 * 2 = 14.</p>
+    <p style="text-align: justify;">The amount of food in 1st houses = 2+8+3+5 = 18. Since, amount of food in 1st 4 houses is sufficient for all the rats. Thus, output is 4.</p>
+    <div style="text-align:center;">
+        <p ><button id="myBtn" style=" background-color: #78e39b;color: white; width:200px; height:50px; border: none; font-size:20px; ">SHOW ANSWER</button></p>
+    </div>
+    <div id="myModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Function calculateFood(r, unit, arr):</p>
+        <p>&nbsp;&nbsp;&nbsp; // Check if the array is null</p>
+        <p>&nbsp;&nbsp;&nbsp; If arr is null:</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Return -1</p>
+        <p>&nbsp;&nbsp;&nbsp;</p>
+        <p>&nbsp;&nbsp;&nbsp; // Calculate total amount of food required for all rats</p>
+        <p>&nbsp;&nbsp;&nbsp; totalFoodRequired = r * unit</p>
+        <p>&nbsp;&nbsp;&nbsp;</p>
+        <p>&nbsp;&nbsp;&nbsp; // Calculate total amount of food available in the houses</p>
+        <p>&nbsp;&nbsp;&nbsp; totalFoodAvailable = 0</p>
+        <p>&nbsp;&nbsp;&nbsp; For i from 0 to n-1:</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; totalFoodAvailable = totalFoodAvailable + arr[i]</p>
+        <p>&nbsp;&nbsp;&nbsp;</p>
+        <p>&nbsp;&nbsp;&nbsp; // Check if total food available is sufficient for all rats</p>
+        <p>&nbsp;&nbsp;&nbsp; If totalFoodAvailable &lt; totalFoodRequired:</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Return 0</p>
+        <p>&nbsp;&nbsp;&nbsp;</p>
+        <p>&nbsp;&nbsp;&nbsp; // Otherwise, iterate through the houses to find the number of houses with sufficient food</p>
+        <p>&nbsp;&nbsp;&nbsp; currentFood = 0</p>
+        <p>&nbsp;&nbsp;&nbsp; For i from 0 to n-1:</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; currentFood = currentFood + arr[i]</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; If currentFood &gt;= totalFoodRequired:</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Return i + 1 // Return the house number where the food is sufficient</p>
+        <p>&nbsp;&nbsp;&nbsp;</p>
+        <p>&nbsp;&nbsp;&nbsp; // If we reached here, it means all houses together have enough food</p>
+        <p>&nbsp;&nbsp;&nbsp; Return n</p>
+        <p>&nbsp;</p>
+        <p>// Example usage</p>
+        <p>r = 7</p>
+        <p>unit = 2</p>
+        <p>n = 8</p>
+        <p>arr = [2, 8, 3, 5, 7, 4, 1, 2]</p>
+        <p>result = calculateFood(r, unit, arr)</p>
+        <p>Print result</p>
+        <p>&nbsp;</p>
+    </div>
+</div>
+<p style="text-align: justify;">2.The Binary number system only uses two digits, 0 and 1 and number system can be called binary string. You are required to implement the following function:</p>
+<p style="text-align: justify;">int OperationsBinaryString(char* str);</p>
+<p style="text-align: justify;">The function accepts a string str as its argument. The string str consists of binary digits eparated with an alphabet as follows:</p>
+<ul style="text-align: justify;">
+    <li>&ndash; A denotes AND operation</li>
+    <li>&ndash; B denotes OR operation</li>
+    <li>&ndash; C denotes XOR Operation</li>
+</ul>
+<p style="text-align: justify;">You are required to calculate the result of the string str, scanning the string to right taking one opearation at a time, and return the same.</p>
+<p style="text-align: justify;"><strong>Note:</strong></p>
+<ul style="text-align: justify;">
+    <li>No order of priorities of operations is required</li>
+    <li>Length of str is odd</li>
+    <li>If str is NULL or None (in case of Python), return -1</li>
+</ul>
+<p style="text-align: justify;"><strong>Input:</strong><br /> str: 1C0C1C1A0B1</p>
+<p style="text-align: justify;"><strong>Output:</strong><br /> 1</p>
+<p style="text-align: justify;">Explanation:<br /> The alphabets in str when expanded becomes &ldquo;1 XOR 0 XOR 1 XOR 1 AND 0 OR 1&rdquo;, result of the expression becomes 1, hence 1 is returned.</p>
+<p style="text-align: justify;">Sample Input:<br /> 0C1A1B1C1C1B0A0</p>
+<p style="text-align: justify;">Output:<br /> 0</p>
+<div style="text-align:center;">
+    <p ><button  id="myBtn1" style=" background-color: #78e39b;color: white; width:200px; height:50px; border: none; font-size:20px; ">SHOW ANSWER</button></p>
+</div>
+<div id="myModal1" class="modal1">
+    <div class="modal-content1">
+        <span class="close1">&times;</span>
+<p>Function OperationsBinaryString(str):</p>
+<p>&nbsp;&nbsp;&nbsp; if str is NULL or None:</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return -1</p>
+<p>&nbsp;</p>
+<p>&nbsp;&nbsp;&nbsp; result = str[0]&nbsp; // Initialize result with the first binary digit</p>
+<p>&nbsp;</p>
+<p>&nbsp;&nbsp;&nbsp; for i = 1 to length of str - 1 with step 2:</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; operation = str[i]&nbsp; // Extract the operation</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; operand = str[i + 1]&nbsp; // Extract the next binary digit</p>
+<p>&nbsp;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if operation == 'A':</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; result = result AND operand</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; else if operation == 'B':</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; result = result OR operand</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; else if operation == 'C':</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; result = result XOR operand</p>
+<p>&nbsp;</p>
+<p>&nbsp;&nbsp;&nbsp; return result</p>
+<p>&nbsp;</p>
+    </div>
+</div>
+    <p>3.You are given a function.<br /> int CheckPassword(char str[], int n);<br /> The function accepts string str of size n as an argument. Implement the function which returns 1 if given string str is valid password else 0.<br /> str is a valid password if it satisfies the below conditions.</p>
+    <ul>
+        <li>&ndash; At least 4 characters</li>
+        <li>&ndash; At least one numeric digit</li>
+        <li>&ndash; At Least one Capital Letter</li>
+        <li>&ndash; Must not have space or slash (/)</li>
+        <li>&ndash; Starting character must not be a number</li>
+    </ul>
+    <p>Assumption:<br /> Input string will not be empty.</p>
+    <p>Example:</p>
+    <p>Input 1:<br /> aA1_67<br /> Input 2:<br /> a987 abC012</p>
+    <p>Output 1:<br /> 1<br /> Output 2:<br /> 0</p>
+    <div style="text-align:center;">
+        <p ><button  id="myBtn2" style=" background-color: #78e39b;color: white; width:200px; height:50px; border: none; font-size:20px; ">SHOW ANSWER</button></p>
+    </div>
+    <div id="myModal2" class="modal2">
+        <div class="modal-content2">
+            <span class="close2">&times;</span>
+            <p>Function CheckPassword(str[], n):</p>
+            <p>&nbsp;&nbsp;&nbsp; if n &lt; 4:</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return 0&nbsp; // Password should have at least 4 characters</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;&nbsp;&nbsp; if str[0] is a numeric digit:</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return 0&nbsp; // Starting character must not be a number</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;&nbsp;&nbsp; containsNumeric = False</p>
+            <p>&nbsp;&nbsp;&nbsp; containsCapital = False</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;&nbsp;&nbsp; for each character in str:</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if character is a space or character is '/':</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return 0&nbsp; // Password must not have space or slash (/)</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if character is a numeric digit:</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; containsNumeric = True</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; else if character is a capital letter:</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; containsCapital = True</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;&nbsp;&nbsp; if not containsNumeric or not containsCapital:</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return 0&nbsp; // Password must have at least one numeric digit and one capital letter</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;&nbsp;&nbsp; return 1&nbsp; // Password satisfies all conditions, return 1</p>
+            </div>
+        </div>
+    <p style="text-align: justify;">4.You are given a function,<br /> int findCount(int arr[], int length, int num, int diff);</p>
+    <p style="text-align: justify;">The function accepts an integer array &lsquo;arr&rsquo;, its length and two integer variables &lsquo;num&rsquo; and &lsquo;diff&rsquo;. Implement this function to find and return the number of elements of &lsquo;arr&rsquo; having an absolute difference of less than or equal to &lsquo;diff&rsquo; with &lsquo;num&rsquo;.<br /> Note: In case there is no element in &lsquo;arr&rsquo; whose absolute difference with &lsquo;num&rsquo; is less than or equal to &lsquo;diff&rsquo;, return -1.</p>
+    <p style="text-align: justify;"><strong>Example:</strong><br /> Input:</p>
+    <ul style="text-align: justify;">
+        <li>arr: 12 3 14 56 77 13</li>
+        <li>num: 13</li>
+        <li>diff: 2</li>
+    </ul>
+    <p style="text-align: justify;">Output:<br /> 3</p>
+    <p style="text-align: justify;"><strong>Explanation:</strong><br /> Elements of &lsquo;arr&rsquo; having absolute difference of less than or equal to &lsquo;diff&rsquo; i.e. 2 with &lsquo;num&rsquo; i.e. 13 are 12, 13 and 14.</p>
+    <p style="text-align: justify;">&nbsp;</p>
+    <div style="text-align:center;">
+        <p ><button  id="myBtn3" style=" background-color: #78e39b;color: white; width:200px; height:50px; border: none; font-size:20px; ">SHOW ANSWER</button></p>
+    </div>
+    <div id="myModal3" class="modal3">
+        <div class="modal-content3">
+            <span class="close3">&times;</span>
+            <p>&nbsp;</p>
+            <p>Function findCount(arr[], length, num, diff):</p>
+            <p>&nbsp;&nbsp;&nbsp; count = 0&nbsp; // Initialize count of elements with absolute difference less than or equal to 'diff'</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;&nbsp;&nbsp; for each element in arr:</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; absoluteDifference = absolute value of (element - num)</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if absoluteDifference &lt;= diff:</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; count = count + 1</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;&nbsp;&nbsp; if count == 0:</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return -1</p>
+            <p>&nbsp;&nbsp;&nbsp; else:</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return count</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            </div>
+        </div>
+    <p style="text-align: justify;"><strong>5.Implement the following Function&nbsp;</strong></p>
+    <p style="text-align: justify;">def differenceofSum(n. m)</p>
+    <p style="text-align: justify;">The function accepts two integers n, m as arguments Find the sum of all numbers in range from 1 to m(both inclusive) that are not divisible by n. Return difference between sum of integers not divisible by n with sum of numbers divisible by n.</p>
+    <p style="text-align: justify;"><strong>Assumption:</strong></p>
+    <ul style="text-align: justify;">
+        <li>n&gt;0 and m&gt;0</li>
+        <li>Sum lies between integral range</li>
+    </ul>
+    <p style="text-align: justify;"><strong>Example</strong></p>
+    <p style="text-align: justify;"><strong>Input<br /></strong>n:4<br />m:20<br /><strong>Output<br /></strong>90</p>
+    <p style="text-align: justify;"><strong>Explanation</strong></p>
+    <ul style="text-align: justify;">
+        <li>Sum of numbers divisible by 4 are 4 + 8 + 12 + 16 + 20 = 60</li>
+        <li>Sum of numbers not divisible by 4 are 1 +2 + 3 + 5 + 6 + 7 + 9 + 10 + 11 + 13 + 14 + 15 + 17 + 18 + 19 = 150</li>
+        <li>Difference 150 &ndash; 60 = 90</li>
+    </ul>
+    <p style="text-align: justify;"><strong>Sample Input<br /></strong>n:3<br />m:10<br /><strong>Sample Output<br /></strong>19</p>
+    <div style="text-align:center;">
+        <p ><button  id="myBtn4" style=" background-color: #78e39b;color: white; width:200px; height:50px; border: none; font-size:20px; ">SHOW ANSWER</button></p>
+    </div>
+    <div id="myModal4" class="modal4">
+        <div class="modal-content4">
+            <span class="close4">&times;</span>
+            <p>Function differenceOfSum(n, m):</p>
+            <p>&nbsp;&nbsp;&nbsp; divisibleSum = 0</p>
+            <p>&nbsp;&nbsp;&nbsp; nonDivisibleSum = 0</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;&nbsp;&nbsp; for i from 1 to m:</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if i is divisible by n:</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; divisibleSum = divisibleSum + i</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; else:</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; nonDivisibleSum = nonDivisibleSum + i</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;&nbsp;&nbsp; return nonDivisibleSum - divisibleSum</p>
+            <p style="text-align: justify;"><strong>&nbsp;</strong></p>
+            </div>
+        </div>
+</div>
+<script src="accjs.js"></script>
+</body>
+</html>

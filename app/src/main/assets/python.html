@@ -1,0 +1,71 @@
+<div style="padding:15px 15px 15px 15px">
+    <p style="text-align: center; font-size:30px";><span style="color: #78e39b;"><strong>PYTHON PROGRAMMING</strong></span></p>
+    <p style="text-align: center;">&nbsp;</p>
+<ol>
+    <li><strong> What is Python? What are the benefits of using Python</strong></li>
+</ol>
+<p>Python is a high-level, interpreted, general-purpose programming language. Being a general-purpose language, it can be used to build almost any type of application with the right tools/libraries. Additionally, python supports objects, modules, threads, exception-handling, and automatic memory management which help in modelling real-world problems and building applications to solve these problems.</p>
+<p><strong>Benefits of using Python:</strong></p>
+<ul>
+    <li>Python is a general-purpose programming language that has a simple, easy-to-learn syntax that emphasizes readability and therefore reduces the cost of program maintenance. Moreover, the language is capable of scripting, is completely open-source, and supports third-party packages encouraging modularity and code reuse.</li>
+    <li>Its high-level data structures, combined with dynamic typing and dynamic binding, attract a huge community of developers for Rapid Application Development and deployment.</li>
+</ul>
+<p>&nbsp;</p>
+<ol start="2">
+    <li><strong> What is a dynamically typed language?</strong></li>
+</ol>
+<p>Before we understand a dynamically typed language, we should learn about what typing is.&nbsp;<strong>Typing</strong>&nbsp;refers to type-checking in programming languages. In a&nbsp;<strong>strongly-typed</strong>&nbsp;language, such as Python,&nbsp;<strong>"1" + 2</strong>&nbsp;will result in a type error since these languages don't allow for "type-coercion" (implicit conversion of data types). On the other hand, a&nbsp;<strong>weakly-typed</strong>&nbsp;language, such as Javascript, will simply output&nbsp;<strong>"12"</strong>&nbsp;as result.</p>
+<p>Type-checking can be done at two stages -</p>
+<ul>
+    <li><strong>Static</strong>&nbsp;- Data Types are checked before execution.</li>
+    <li><strong>Dynamic</strong>&nbsp;- Data Types are checked during execution.</li>
+</ul>
+<p>Python is an interpreted language, executes each statement line by line and thus type-checking is done on the fly, during execution. Hence, Python is a Dynamically Typed Language</p>
+<p>&nbsp;</p>
+<h3>3. What is an Interpreted language?</h3>
+<p>An Interpreted language executes its statements line by line. Languages such as Python, Javascript, R, PHP, and Ruby are prime examples of Interpreted languages. Programs written in an interpreted language runs directly from the source code, with no intermediary compilation step.</p>
+<ol start="4">
+    <li><strong> What is PEP 8 and why is it important?</strong></li>
+</ol>
+<p>PEP stands for&nbsp;<strong>Python Enhancement Proposal</strong>. A PEP is an official design document providing information to the Python community, or describing a new feature for Python or its processes.&nbsp;<strong>PEP 8</strong>&nbsp;is especially important since it documents the style guidelines for Python Code. Apparently contributing to the Python open-source community requires you to follow these style guidelines sincerely and strictly.</p>
+<ol start="5">
+    <li><strong> What is Scope in Python?</strong></li>
+</ol>
+<p>Every object in Python functions within a scope. A scope is a block of code where an object in Python remains relevant. Namespaces uniquely identify all the objects inside a program. However, these namespaces also have a scope defined for them where you could use their objects without any prefix. A few examples of scope created during code execution in Python are as follows:</p>
+<ul>
+    <li>A&nbsp;<strong>local scope</strong>&nbsp;refers to the local objects available in the current function.</li>
+    <li>A&nbsp;<strong>global scope</strong>&nbsp;refers to the objects available throughout the code execution since their inception.</li>
+    <li>A&nbsp;<strong>module-level scope</strong>&nbsp;refers to the global objects of the current module accessible in the program.</li>
+    <li>An&nbsp;<strong>outermost scope</strong>&nbsp;refers to all the built-in names callable in the program. The objects in this scope are searched last to find the name referenced.</li>
+</ul>
+<p><strong>Note:</strong>&nbsp;Local scope objects can be synced with global scope objects using keywords such as&nbsp;<strong>global</strong>.</p>
+<p>&nbsp;</p>
+<h3>6. What are lists and tuples? What is the key difference between the two?</h3>
+<p><strong>Lists&nbsp;</strong>and&nbsp;<strong>Tuples</strong>&nbsp;are both s<strong>equence data types</strong>&nbsp;that can store a collection of objects in Python. The objects stored in both sequences can have&nbsp;<strong>different data types</strong>. Lists are represented with&nbsp;<strong>square brackets</strong>&nbsp;['sara', 6, 0.19], while tuples are represented with&nbsp;<strong>parantheses</strong>&nbsp;('ansh', 5, 0.97).<br /> But what is the real difference between the two? The key difference between the two is that while&nbsp;<strong>lists are mutable</strong>,&nbsp;<strong>tuples</strong>&nbsp;on the other hand are&nbsp;<strong>immutable</strong>&nbsp;objects.&nbsp;</p>
+<p>&nbsp;</p>
+<h3>&nbsp;</h3>
+<h3>&nbsp;</h3>
+<h3>&nbsp;</h3>
+<h3>&nbsp;</h3>
+<h3>7. What are the common built-in data types in Python?</h3>
+<p>There are several built-in data types in Python. Although, Python doesn't require data types to be defined explicitly during variable declarations type errors are likely to occur if the knowledge of data types and their compatibility with each other are neglected. Python provides&nbsp;type()&nbsp;and&nbsp;isinstance()&nbsp;functions to check the type of these variables.&nbsp;</p>
+<h3>8. What is pass in Python?</h3>
+<p>The&nbsp;pass&nbsp;keyword represents a null operation in Python. It is generally used for the purpose of filling up empty blocks of code which may execute during runtime but has yet to be written. Without the&nbsp;<strong>pass</strong>&nbsp;statement in the following code, we may run into some errors during code execution.</p>
+<h3>9. What are modules and packages in Python?</h3>
+<p><strong>Modules</strong>, in general, are simply Python files with a .py extension and can have a set of functions, classes, or variables defined and implemented. They can be imported and initialized once using the&nbsp;import&nbsp;statement. If partial functionality is needed, import the requisite classes or functions using&nbsp;from foo import bar.</p>
+<p><strong>Packages</strong>&nbsp;allow for hierarchial structuring of the module namespace using&nbsp;<strong>dot notation</strong>. As,&nbsp;<strong>modules</strong>&nbsp;help avoid clashes between global variable names, in a similar manner,&nbsp;<strong>packages</strong>&nbsp;help avoid clashes between module names.</p>
+<p>&nbsp;</p>
+<ol start="10">
+    <li><strong> What are global, protected and private attributes in Python</strong><strong>?</strong></li>
+</ol>
+<ul>
+    <li><strong>Global</strong>&nbsp;variables are public variables that are defined in the global scope. To use the variable in the global scope inside a function, we use the&nbsp;global&nbsp;keyword.</li>
+    <li><strong>Protected</strong>&nbsp;attributes are attributes defined with an underscore prefixed to their identifier eg. _sara. They can still be accessed and modified from outside the class they are defined in but a responsible developer should refrain from doing so.</li>
+    <li><strong>Private&nbsp;</strong>attributes are attributes with double underscore prefixed to their identifier eg. __ansh. They cannot be accessed or modified from the outside directly and will result in an AttributeError if such an attempt is made</li>
+</ul>
+<p>&nbsp;</p>
+<h3>&nbsp;</h3>
+<h3>11. What is the use of self in Python?</h3>
+<p><strong>Self&nbsp;</strong>is used to represent the instance of the class. With this keyword, you can access the attributes and methods of the class in python. It binds the attributes with the given arguments. self is used in different places and often thought to be a keyword. But unlike in C++, self is not a keyword in Python</p>
+<p>&nbsp;</p>
+</div>

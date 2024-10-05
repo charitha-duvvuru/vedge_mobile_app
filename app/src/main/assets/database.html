@@ -1,0 +1,67 @@
+<div style="padding:15px 15px 15px 15px">
+    <p style="text-align: center; font-size:30px";><span style="color: #78e39b;"><strong>DATABASE MANAGEMENT</strong></span></p>
+    <p style="text-align: center;">&nbsp;</p>
+    <p><strong>1) What is DBMS and what is its utility? Explain RDBMS with examples.</strong></p>
+    <p>DBMS stands for&nbsp;<a href="https://www.interviewbit.com/blog/components-of-dbms/"><strong><strong>Database Management System</strong></strong></a><strong><strong>,</strong></strong>&nbsp;is a set of applications or programs that enable users to create and maintain a database. DBMS provides a tool or an interface for performing various operations such as inserting, deleting, updating, etc. into a database. It is software that enables the storage of data more compactly and securely as compared to a file-based system. A DBMS system helps a user to overcome problems like data inconsistency, data redundancy, etc. in a database and makes it more convenient and organized to use it</p>
+    <h3><strong><strong>2) What is a database?</strong></strong></h3>
+    <p>A Database is a logical, consistent and organized collection of data that it can easily be accessed, managed and updated. Databases, also known as electronic databases are structured to provide the facility of creation, insertion, updating of the data efficiently and are stored in the form of a file or set of files, on the magnetic disk, tapes and another sort of secondary devices. Database mostly consists of the objects (tables), and tables include of the records and fields. Fields are the basic units of data storage, which contain the information about a particular aspect or attribute of the entity described by the database. DBMS is used for extraction of data from the database in the form of the queries.</p>
+    <p>&nbsp;</p>
+    <h3>3) <strong><strong>What is a database system?</strong></strong></h3>
+    <p>The collection of database and DBMS software together is known as a database system. Through the database system, we can perform many activities such as-</p>
+    <p>The data can be stored in the database with ease, and there are no issues of data redundancy and data inconsistency.</p>
+    <p>The data will be extracted from the database using DBMS software whenever required. So, the combination of database and DBMS software enables one to store, retrieve and access data with considerate accuracy and security.</p>
+    <p>&nbsp;</p>
+    <p><strong><strong>4) What are the advantages of DBMS?</strong></strong></p>
+    <ul>
+        <li>Redundancy control</li>
+        <li>Restriction for unauthorized access</li>
+        <li>Provides multiple user interfaces</li>
+        <li>Provides backup and recovery</li>
+        <li>Enforces integrity constraints</li>
+        <li>Ensure data consistency</li>
+        <li>Easy accessibility</li>
+        <li>Easy data extraction and data processing due to the use of queries</li>
+    </ul>
+    <p>&nbsp;</p>
+    <p><strong><strong>5) What is a checkpoint in DBMS?</strong></strong></p>
+    <p>The Checkpoint is a type of mechanism where all the previous logs are removed from the system and permanently stored in the storage disk.</p>
+    <p>&nbsp;</p>
+    <p><strong><strong>6) When does checkpoint occur in DBMS?</strong></strong></p>
+    <p>A checkpoint is like a snapshot of the DBMS state. Using checkpoints, the DBMS can reduce the amount of work to be done during a restart in the event of subsequent crashes. Checkpoints are used for the recovery of the database after the system crash. Checkpoints are used in the log-based recovery system. When due to a system crash we need to restart the system then at that point we use checkpoints. So that, we don't have to perform the transactions from the very starting.</p>
+    <p>&nbsp;</p>
+    <p><strong><strong>7) What do you mean by transparent DBMS?</strong></strong></p>
+    <p>The transparent DBMS is a type of DBMS which keeps its physical structure hidden from users. Physical structure or physical storage structure implies to the memory manager of the DBMS, and it describes how the data stored on disk.</p>
+    <p><strong><strong>&nbsp;</strong></strong></p>
+    <p><strong><strong>8) What are the unary operations in Relational Algebra?</strong></strong></p>
+    <p>PROJECTION and SELECTION are the unary operations in relational algebra. Unary operations are those operations which use single operands. Unary operations are SELECTION, PROJECTION, and RENAME.</p>
+    <p>As in SELECTION relational operators are used for example - =,&lt;=,&gt;=, etc.</p>
+    <p>&nbsp;</p>
+    <p><strong><strong>&nbsp;</strong></strong></p>
+    <p><strong><strong>9) What is RDBMS?</strong></strong></p>
+    <p>RDBMS stands for Relational Database Management Systems. It is used to maintain the data records and indices in tables. RDBMS is the form of DBMS which uses the structure to identify and access data concerning the other piece of data in the database. RDBMS is the system that enables you to perform different operations such as- update, insert, delete, manipulate and administer a relational database with minimal difficulties. Most of the time RDBMS use SQL language because it is easily understandable and is used for often.</p>
+    <p><strong><strong>&nbsp;</strong></strong></p>
+    <p><strong><strong>10) How many types of database languages are</strong></strong>?</p>
+    <p>There are four types of database languages:</p>
+    <ul>
+        <li><strong><strong>Data Definition Language (DDL)</strong></strong>g., CREATE, ALTER, DROP, TRUNCATE, RENAME, etc. All these commands are used for updating the data that?s why they are known as Data Definition Language.</li>
+        <li><strong><strong>Data Manipulation Language (DML)</strong></strong>g., SELECT, UPDATE, INSERT, DELETE, etc. These commands are used for the manipulation of already updated data that's why they are the part of Data Manipulation Language.</li>
+        <li><strong><strong>DATA Control Language (DCL)</strong></strong>g., GRANT and REVOKE. These commands are used for giving and removing the user access on the database. So, they are the part of Data Control Language.</li>
+        <li><strong><strong>Transaction Control Language (TCL)</strong></strong>g., COMMIT, ROLLBACK, and SAVEPOINT. These are the commands used for managing transactions in the database. TCL is used for managing the changes made by DML.</li>
+    </ul>
+    <p><strong><strong>11) What do you understand by Data Model?</strong></strong></p>
+    <p>The Data model is specified as a collection of conceptual tools for describing data, data relationships, data semantics and constraints. These models are used to describe the relationship between the entities and their attributes.</p>
+    <p>There is the number of data models:</p>
+    <ul>
+        <li>Hierarchical data model</li>
+        <li>network model</li>
+        <li>relational model</li>
+        <li>Entity-Relationship model and so on.</li>
+    </ul>
+    <p>&nbsp;</p>
+    <p><strong><strong>12) Define a Relation Schema and a Relation.</strong></strong></p>
+    <p>A Relation Schema is specified as a set of attributes. It is also known as table schema. It defines what the name of the table is. Relation schema is known as the blueprint with the help of which we can explain that how the data is organized into tables. This blueprint contains no data.</p>
+    <p><strong><strong>&nbsp;</strong></strong></p>
+    <p><strong><strong>13) What is a degree of Relation?</strong></strong></p>
+    <p>The degree of relation is a number of attribute of its relation schema. A degree of relation is also known as Cardinality it is defined as the number of occurrence of one entity which is connected to the number of occurrence of other entity. There are three degree of relation they are one-to-one(1:1), one-to-many(1:M), many-to-one(M:M).</p>
+    <p>&nbsp;</p>
+</div>

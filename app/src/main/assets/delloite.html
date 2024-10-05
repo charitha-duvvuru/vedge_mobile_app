@@ -1,0 +1,227 @@
+<html>
+<head>
+    <link rel="stylesheet" href="accstyle.css">
+</head>
+<body>
+<div style="padding: 15px 15px 15px 15px;">
+    <p style="font-size: 30px; text-align: center;"><span style="color: #78e39b;"><strong>DELLOITE</strong></span></p>
+    <p style="text-align: justify;">&nbsp;</p>
+    <p><strong>1.Problem Statement :&nbsp;</strong>After JEE Mains, some students got admission into an engineering college. Now there is a class consisting of such n students, and the HOD came to say it is time to select the class monitor. But He never gets all of them at one time. So he brought a register, every time he gets someone with less rank than the previous time he cut the name and wrote the name of the student and the rank.<br />For a given number of ranks he gets each time, you have to predict how many names are cut in the list.</p>
+    <p><strong>Constraints:</strong><br />Number of Visiting&lt;=10^9<br />ranks &lt;=10000</p>
+    <p><strong>Input Format:</strong><br />Number of Visiting N in their first line<br />N space separated ranks the HOD gets each time</p>
+    <p><strong>Output Format:</strong><br />Number of ranks cut in the list</p>
+    <p><strong>Sample Input:</strong><br />6<br />4 3 7 2 6 1</p>
+    <p><strong>Sample Output:</strong><br />3</p>
+    <div style="text-align:center;">
+        <p ><button id="myBtn" style=" background-color: #78e39b;color: white; width:200px; height:50px; border: none; font-size:20px; ">SHOW ANSWER</button></p>
+    </div>
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Function countNamesCut(N, ranks):</p>
+            <p>&nbsp;&nbsp;&nbsp; Initialize a variable to store the count of names cut (cutCount) as 0</p>
+            <p>&nbsp;&nbsp;&nbsp; Initialize a variable to store the previous rank (prevRank) as infinity</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;&nbsp;&nbsp; for each rank in ranks:</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if rank &lt; prevRank:</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Increment cutCount</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Set prevRank to rank</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;&nbsp;&nbsp; Return cutCount</p>
+            <p>&nbsp;</p>
+            <p>Input:</p>
+            <p>Read N from the user</p>
+            <p>Read ranks from the user as an array</p>
+            <p>&nbsp;</p>
+            <p>// Call the function to count names cut</p>
+            <p>cutCount = countNamesCut(N, ranks)</p>
+            <p>&nbsp;</p>
+            <p>// Print the number of ranks cut in the list</p>
+            <p>Print cutCount</p>
+        </div>
+    </div>
+    <p><strong>2.Problem Statement :&nbsp;</strong>Every decimal number can be changed into its binary form. Suppose your computer has it&rsquo;s own CoronaVirus, that eats binary digits from the right side of a number. Suppose a virus has 6 spikes, it will eat up 6 LSB binary digits in your numbers.<br />You will have a bunch of numbers, and your machine will have a virus with n spikes, you have to calculate what will be the final situation of the final numbers.</p>
+    <p><strong>Input Format:</strong><br />First line, a single Integer N<br />Second line N space separated integers of the bunch of values as array V<br />Third line a single integer n, the number of spikes in Corona for Computer</p>
+    <p><strong>Output Format:</strong><br />Single N space separated integers denoting the final situation with the array v.</p>
+    <p><strong>Sample Input:</strong><br />5<br />1 2 3 4 5<br />2</p>
+    <p><strong>Output:</strong><br />0 0 0 1 1</p>
+    <p><strong>Explanation:</strong><br />5 is 101 in binary, when you cut the last two binary digits, its 1.</p>
+    <div style="text-align:center;">
+        <p ><button  id="myBtn1" style=" background-color: #78e39b;color: white; width:200px; height:50px; border: none; font-size:20px; ">SHOW ANSWER</button></p>
+    </div>
+    <div id="myModal1" class="modal1">
+        <div class="modal-content1">
+            <span class="close1">&times;</span>
+            <p>Function applyVirus(N, V, spikes):</p>
+            <p>&nbsp;&nbsp;&nbsp; for each value in V:</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Convert the value to binary</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; binaryValue = ConvertToBinary(value)</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Remove 'spikes' number of digits from the right</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; newBinaryValue = RemoveRightmostDigits(binaryValue, spikes)</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Convert the modified binary back to decimal</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; modifiedValue = ConvertToDecimal(newBinaryValue)</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Print modifiedValue</p>
+            <p>&nbsp;</p>
+            <p>Input:</p>
+            <p>Read N from the user</p>
+            <p>Read array V from the user</p>
+            <p>Read spikes from the user</p>
+            <p>&nbsp;</p>
+            <p>// Call the function to apply the virus to the values</p>
+            <p>applyVirus(N, V, spikes)</p>
+        </div>
+    </div>
+    <p><strong>3.Problem Statement :&nbsp;</strong>Arnab has given me a challenge. I have to calculate the number of numbers which are less than a certain value n, and have exactly k set bits in its binary form. As you are a Prepster like me, help me write a code that will take input for n and k and give the expected output.</p>
+    <p><strong>Constraints :</strong><br />1&lt;=n&lt;=10000<br />1&lt;=k&lt;=10<br /><strong>Input Format :</strong><br />First line containing n and k space separated<br /><strong>Output Format :</strong><br />Number of numbers present in a single line</p>
+    <p><strong>Sample Input:</strong><br />7 2<br /><strong>Sample Output:</strong><br />3<br /><strong>Explanation:</strong><br />11,110,101 -&gt; These three numbers.</p>
+    <div style="text-align:center;">
+        <p ><button  id="myBtn2" style=" background-color: #78e39b;color: white; width:200px; height:50px; border: none; font-size:20px; ">SHOW ANSWER</button></p>
+    </div>
+    <div id="myModal2" class="modal2">
+        <div class="modal-content2">
+            <span class="close2">&times;</span>
+            <p>&nbsp;</p>
+            <p>Function countNumbers(n, k):</p>
+            <p>&nbsp;&nbsp;&nbsp; Initialize a variable count to 0</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;&nbsp;&nbsp; for i from 0 to n:</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if countSetBits(i) == k:</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Increment count</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;&nbsp;&nbsp; Return count</p>
+            <p>&nbsp;</p>
+            <p>Function countSetBits(num):</p>
+            <p>&nbsp;&nbsp;&nbsp; Initialize a variable setBits to 0</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;&nbsp;&nbsp; while num is not equal to 0:</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if num AND 1 is equal to 1:</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Increment setBits</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Right shift num by 1</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;&nbsp;&nbsp; Return setBits</p>
+            <p>&nbsp;</p>
+            <p>Input:</p>
+            <p>Read n, k from the user</p>
+            <p>&nbsp;</p>
+            <p>// Call the function to count numbers with exactly k set bits less than n</p>
+            <p>count = countNumbers(n, k)</p>
+            <p>&nbsp;</p>
+            <p>// Print the count of such numbers</p>
+            <p>Print count</p>
+        </div>
+    </div>
+    <p><strong>4.Problem Statement :&nbsp;</strong>Ratul made a linked list, a list made of n nodes, where every node has two variables, the velocity and the mass of a particle.<br />Since all the particles have the velocity in the same direction, find the total momentum of the entity made by the particles from the linked list.</p>
+    <p><strong>Constraints :</strong><br />1&lt;=n&lt;=10000<br />1&lt;=m,v&lt;=100<br /><strong>Input format:</strong><br />First line containing n, number of nodes<br />Then n lines containing the mass and the velocity space separated.<br /><strong>Output Format:</strong><br />Single integer denoting the momentum</p>
+    <p><strong>Sample Input:</strong><br />4<br />1 3<br />2 4<br />2 3<br />4 5</p>
+    <p><strong>Sample Output:</strong><br />37</p>
+    <div style="text-align:center;">
+        <p ><button  id="myBtn3" style=" background-color: #78e39b;color: white; width:200px; height:50px; border: none; font-size:20px; ">SHOW ANSWER</button></p>
+    </div>
+    <div id="myModal3" class="modal3">
+        <div class="modal-content3">
+            <span class="close3">&times;</span>
+            <p>&nbsp;</p>
+            <p>Function calculateMomentum(n, linkedList):</p>
+            <p>&nbsp;&nbsp;&nbsp; Initialize momentum as 0</p>
+            <p>&nbsp;&nbsp;&nbsp;</p>
+            <p>&nbsp;&nbsp;&nbsp; // Traverse the linked list</p>
+            <p>&nbsp;&nbsp;&nbsp; currentNode = linkedList.head</p>
+            <p>&nbsp;&nbsp;&nbsp; while currentNode is not null:</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mass = currentNode.mass</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; velocity = currentNode.velocity</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;// Calculate momentum for current node and add it to the total momentum</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; momentum = momentum + (mass * velocity)</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Move to the next node</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; currentNode = currentNode.next</p>
+            <p>&nbsp;&nbsp;&nbsp;</p>
+            <p>&nbsp;&nbsp;&nbsp; Return momentum</p>
+            <p>&nbsp;</p>
+            <p>// Define a Node class for linked list</p>
+            <p>class Node:</p>
+            <p>&nbsp;&nbsp;&nbsp; Initialize Node:</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Initialize mass as 0</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Initialize velocity as 0</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Initialize next as null</p>
+            <p>&nbsp;</p>
+            <p>Input:</p>
+            <p>Read n from the user</p>
+            <p>Create an empty linked list</p>
+            <p>&nbsp;</p>
+            <p>// Read data for each node and add it to the linked list</p>
+            <p>for i from 1 to n:</p>
+            <p>&nbsp;&nbsp;&nbsp; Read mass, velocity from the user</p>
+            <p>&nbsp;&nbsp;&nbsp; Create a new node with mass and velocity</p>
+            <p>&nbsp;&nbsp;&nbsp; Add the new node to the linked list</p>
+            <p>&nbsp;</p>
+            <p>// Call the function to calculate momentum</p>
+            <p>momentum = calculateMomentum(n, linkedList)</p>
+            <p>&nbsp;</p>
+            <p>// Print the total momentum</p>
+            <p>Print momentum</p>
+        </div>
+    </div>
+    <div class="elementor-element elementor-element-6062249 txtDown elementor-widget elementor-widget-text-editor" data-id="6062249" data-element_type="widget" data-widget_type="text-editor.default">
+        <div class="elementor-widget-container">
+            <p><strong>5.Problem Statement :&nbsp;</strong>Anish is the laziest person you can ever see. He is tasked to write the name of the winner in a game where two people take part. And he just writes the longest common subsequence over there, so that with minimum chane or no backspace he can edit the name to the winner&rsquo;s name.<br />For two given names, you have to predict what Anish will write in his computer before the start of the name. If there are more than two longest subsequences possible,write the one with less lexicographic value.<br />Input Format:<br />Two lines including two strings of name(All with capital letters)</p>
+            <p><strong>Output Format:</strong><br />A single line with the lexicographically smallest possible longest common subsequence.</p>
+            <p><strong>Sample Input:</strong><br />ABCD<br />BACD<br /><strong>Sample Output:</strong><br />ACD<br /><strong>Explanation:</strong><br />ACD and BCD these are the two possible biggest substring</p>
+        </div>
+    </div>
+    <div class="elementor-element elementor-element-38dba39 txtDown elementor-tabs-view-horizontal elementor-widget elementor-widget-tabs" data-id="38dba39" data-element_type="widget" data-widget_type="tabs.default">&nbsp;</div>
+    <div style="text-align:center;">
+        <p ><button  id="myBtn4" style=" background-color: #78e39b;color: white; width:200px; height:50px; border: none; font-size:20px; ">SHOW ANSWER</button></p>
+    </div>
+    <div id="myModal4" class="modal4">
+        <div class="modal-content4">
+            <span class="close4">&times;</span>
+            <p>Function longestCommonSubsequence(name1, name2):</p>
+            <p>&nbsp;&nbsp;&nbsp; Initialize a 2D array dp of size (n1+1) x (n2+1) where n1 is the length of name1 and n2 is the length of name2</p>
+            <p>&nbsp;&nbsp;&nbsp; Initialize dp[i][0] and dp[0][j] as 0 for all i and j</p>
+            <p>&nbsp;&nbsp;&nbsp; Initialize a 2D array direction of size (n1+1) x (n2+1) to store the direction of movement</p>
+            <p>&nbsp;&nbsp;&nbsp;</p>
+            <p>&nbsp;&nbsp;&nbsp; for i from 1 to n1:</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; for j from 1 to n2:</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if name1[i-1] is equal to name2[j-1]:</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Set dp[i][j] = dp[i-1][j-1] + 1</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Set direction[i][j] = "diagonal"</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; else:</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if dp[i-1][j] &gt;= dp[i][j-1]:</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Set dp[i][j] = dp[i-1][j]</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Set direction[i][j] = "up"</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; else:</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Set dp[i][j] = dp[i][j-1]</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Set direction[i][j] = "left"</p>
+            <p>&nbsp;&nbsp;&nbsp;</p>
+            <p>&nbsp;&nbsp;&nbsp; Initialize an empty string result</p>
+            <p>&nbsp;&nbsp;&nbsp; Set i = n1, j = n2</p>
+            <p>&nbsp;&nbsp;&nbsp; while i &gt; 0 and j &gt; 0:</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if direction[i][j] is equal to "diagonal":</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Append name1[i-1] to result</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Decrement both i and j</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; else if direction[i][j] is equal to "up":</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Decrement i</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; else:</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Decrement j</p>
+            <p>&nbsp;&nbsp;&nbsp;</p>
+            <p>&nbsp;&nbsp;&nbsp; Return the reverse of result</p>
+            <p>&nbsp;</p>
+            <p>Input:</p>
+            <p>Read name1 from the user</p>
+            <p>Read name2 from the user</p>
+            <p>&nbsp;</p>
+            <p>// Call the function to find the longest common subsequence</p>
+            <p>result = longestCommonSubsequence(name1, name2)</p>
+            <p>&nbsp;</p>
+            <p>// Print the result</p>
+            <p>Print result</p>
+        </div>
+    </div>
+</div>
+<script src="accjs.js"></script>
+</body>
+</html>

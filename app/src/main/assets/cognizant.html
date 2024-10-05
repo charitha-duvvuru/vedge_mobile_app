@@ -1,0 +1,294 @@
+<html>
+<head>
+    <link rel="stylesheet" href="accstyle.css">
+</head>
+<body>
+<div style="padding: 15px 15px 15px 15px;">
+    <p style="font-size: 30px; text-align: center;"><span style="color: #78e39b;"><strong>COGNIZANT</strong></span></p>
+    <p style="text-align: justify;">&nbsp;</p>
+    <p><strong>1.Problem Statement &ndash;&nbsp;</strong>Write a program to calculate the fuel consumption of your truck.The program should ask the user to enter the quantity of diesel to fill up the tank and the distance covered till the tank goes dry.Calculate the fuel consumption and display it in the format (liters per 100 kilometers).</p>
+    <p>Convert the same result to the U.S. style of miles per gallon and display the result. If the quantity or distance is zero or negative display &rdquo; is an Invalid Input&rdquo;.</p>
+    <p>[<strong>Note:</strong>&nbsp;The US approach of fuel consumption calculation (distance / fuel) is the inverse of the European approach (fuel / distance ). Also note that 1 kilometer is 0.6214 miles, and 1 liter is 0.2642 gallons.]</p>
+    <p>The result should be with two decimal place.To get two decimal place refer the below-mentioned print statement :</p>
+    <p>float cost=670.23;</p>
+    <p>System.out.printf(&ldquo;You need a sum of Rs.%.2f to cover the trip&rdquo;,cost);</p>
+    <p><strong>Sample Input 1:</strong></p>
+    <ul>
+        <li>Enter the no of liters to fill the tank</li>
+    </ul>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 20</p>
+    <ul>
+        <li>Enter the distance covered</li>
+    </ul>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 150</p>
+    <p><strong>Sample Output 1:</strong></p>
+    <ul>
+        <li>Liters/100KM</li>
+    </ul>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 13.33</p>
+    <ul>
+        <li>Miles/gallons</li>
+    </ul>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 17.64</p>
+    <p><strong>Explanation:&nbsp;</strong></p>
+    <ul>
+        <li>For 150 KM fuel consumption is 20 liters,&nbsp;</li>
+        <li>Then for 100 KM fuel consumption would be (20/150)*100=13.33,</li>
+        <li>Distance is given in KM, we have to convert it to miles (150*0.6214)=93.21,</li>
+        <li>Fuel consumption is given in liters, we have to convert it to gallons (20*0.2642)=5.284,&nbsp;</li>
+        <li>Then find (miles/gallons)=(93.21/5.284)=17.64</li>
+    </ul>
+    <p><strong>Sample Input 2:</strong></p>
+    <ul>
+        <li>Enter the no of liters to fill the tank</li>
+    </ul>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -5</p>
+    <p><strong>Sample Output 2:</strong></p>
+    <ul>
+        <li>-5 is an Invalid Input</li>
+    </ul>
+    <p><strong>Sample Input 3:</strong></p>
+    <ul>
+        <li>Enter the no of liters to fill the tank</li>
+    </ul>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 25</p>
+    <ul>
+        <li>Enter the distance covered</li>
+    </ul>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -21</p>
+    <p><strong>Sample Output 3:</strong></p>
+    <ul>
+        <li>-21 is an Invalid Input</li>
+    </ul>
+    <div style="text-align:center;">
+        <p ><button id="myBtn" style=" background-color: #78e39b;color: white; width:200px; height:50px; border: none; font-size:20px; ">SHOW ANSWER</button></p>
+    </div>
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>&nbsp;</p>
+            <p>Function calculateFuelConsumption():</p>
+            <p>&nbsp;&nbsp;&nbsp; // Prompt user to enter the quantity of diesel and distance covered</p>
+            <p>&nbsp;&nbsp;&nbsp; Print "Enter the no of liters to fill the tank"</p>
+            <p>&nbsp;&nbsp;&nbsp; Read liters</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;&nbsp;&nbsp; Print "Enter the distance covered"</p>
+            <p>&nbsp;&nbsp;&nbsp; Read distance</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;&nbsp;&nbsp; // Check if inputs are valid</p>
+            <p>&nbsp;&nbsp;&nbsp; if liters &lt;= 0 or distance &lt;= 0:</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Print "Invalid Input"</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;&nbsp;&nbsp; // Calculate fuel consumption in liters per 100 kilometers</p>
+            <p>&nbsp;&nbsp;&nbsp; consumption_liters_per_100_km = (liters / distance) * 100</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;&nbsp;&nbsp; // Calculate fuel consumption in miles per gallon</p>
+            <p>&nbsp;&nbsp;&nbsp; consumption_miles_per_gallon = (distance * 0.6214) / (liters * 0.2642)</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;&nbsp;&nbsp; // Print the results with two decimal places</p>
+            <p>&nbsp;&nbsp;&nbsp; Print "Liters/100KM"</p>
+            <p>&nbsp;&nbsp;&nbsp; Print consumption_liters_per_100_km rounded to 2 decimal places</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;&nbsp;&nbsp; Print "Miles/gallons"</p>
+            <p>&nbsp;&nbsp;&nbsp; Print consumption_miles_per_gallon rounded to 2 decimal places</p>
+            <p>&nbsp;</p>
+            <p>// Call the function to start the program</p>
+            <p>calculateFuelConsumption()</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+        </div>
+    </div>
+    <p style="text-align: justify;"><strong>2.Problem Statement &ndash;&nbsp;</strong>Vohra went to a movie with his friends in a Wave theatre and during&nbsp; break time he bought pizzas, puffs and cool drinks. Consider &nbsp; the following prices :&nbsp;</p>
+    <ul style="text-align: justify;">
+        <li>Rs.100/pizza</li>
+        <li>Rs.20/puffs</li>
+        <li>Rs.10/cooldrink</li>
+    </ul>
+    <p style="text-align: justify;">Generate a bill for What Vohra has bought.</p>
+    <p style="text-align: justify;"><strong>Sample Input 1:</strong></p>
+    <ul style="text-align: justify;">
+        <li>Enter the no of pizzas bought:10</li>
+        <li>Enter the no of puffs bought:12</li>
+        <li>Enter the no of cool drinks bought:5</li>
+    </ul>
+    <p style="text-align: justify;"><strong>Sample Output 1:</strong></p>
+    <p style="text-align: justify;">Bill Details</p>
+    <ul style="text-align: justify;">
+        <li>No of pizzas:10</li>
+        <li>No of puffs:12</li>
+        <li>No of cooldrinks:5</li>
+        <li>Total price=1290</li>
+    </ul>
+    <p style="text-align: justify;">ENJOY THE SHOW!!!</p>
+    <div style="text-align:center;">
+        <p ><button  id="myBtn1" style=" background-color: #78e39b;color: white; width:200px; height:50px; border: none; font-size:20px; ">SHOW ANSWER</button></p>
+    </div>
+    <div id="myModal1" class="modal1">
+        <div class="modal-content1">
+            <span class="close1">&times;</span>
+            <p>Function generateBill():</p>
+            <p>&nbsp;&nbsp;&nbsp; // Prompt user to enter the number of pizzas, puffs, and cool drinks bought</p>
+            <p>&nbsp;&nbsp;&nbsp; Print "Enter the no of pizzas bought:"</p>
+            <p>&nbsp;&nbsp;&nbsp; Read pizzas</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;&nbsp;&nbsp; Print "Enter the no of puffs bought:"</p>
+            <p>&nbsp;&nbsp;&nbsp; Read puffs</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;&nbsp;&nbsp; Print "Enter the no of cool drinks bought:"</p>
+            <p>&nbsp;&nbsp;&nbsp; Read coolDrinks</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;&nbsp;&nbsp; // Calculate the total price for each item</p>
+            <p>&nbsp;&nbsp;&nbsp; pizzaPrice = 100 * pizzas</p>
+            <p>&nbsp;&nbsp;&nbsp; puffPrice = 20 * puffs</p>
+            <p>&nbsp;&nbsp;&nbsp; coolDrinkPrice = 10 * coolDrinks</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;&nbsp;&nbsp; // Calculate the total price of the bill</p>
+            <p>&nbsp;&nbsp;&nbsp; totalPrice = pizzaPrice + puffPrice + coolDrinkPrice</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;&nbsp;&nbsp; // Print the bill details</p>
+            <p>&nbsp;&nbsp;&nbsp; Print "Bill Details"</p>
+            <p>&nbsp;&nbsp;&nbsp; Print "No of pizzas:" pizzas</p>
+            <p>&nbsp;&nbsp;&nbsp; Print "No of puffs:" puffs</p>
+            <p>&nbsp;&nbsp;&nbsp; Print "No of cooldrinks:" coolDrinks</p>
+            <p>&nbsp;&nbsp;&nbsp; Print "Total price=" totalPrice</p>
+            <p>&nbsp;&nbsp;&nbsp; Print "ENJOY THE SHOW!!!"</p>
+            <p>&nbsp;</p>
+            <p>// Call the function to generate the bill</p>
+            <p>generateBill()</p>
+        </div>
+    </div>
+    <p><strong>3.Problem Statement &ndash;&nbsp;</strong>Ritik wants a magic board, which displays a character for a corresponding number for his science project. Help him to develop such an application.<br /><strong>For example</strong>&nbsp;when the digits 65,66,67,68 are entered, the alphabet ABCD are to be displayed.<br />[Assume the number of inputs should be always 4 ]</p>
+    <p><strong>Sample Input 1:</strong></p>
+    <ul>
+        <li>Enter the digits:<br />65<br />66<br />67<br />68</li>
+    </ul>
+    <p><strong>Sample Output 1:</strong></p>
+    <p>65-A<br />66-B<br />67-C<br />68-D</p>
+    <p><strong>Sample Input 2:</strong></p>
+    <ul>
+        <li>Enter the digits:<br />115<br />116<br />101<br />112</li>
+    </ul>
+    <p><strong>Sample Output 2:</strong></p>
+    <p>115-s<br />116-t<br />101-e<br />112-p</p>
+    <div style="text-align:center;">
+        <p ><button  id="myBtn2" style=" background-color: #78e39b;color: white; width:200px; height:50px; border: none; font-size:20px; ">SHOW ANSWER</button></p>
+    </div>
+    <div id="myModal2" class="modal2">
+        <div class="modal-content2">
+            <span class="close2">&times;</span>
+            <p>Function displayCharacters():<br /> // Prompt the user to enter the digits<br /> Print "Enter the digits:"</p>
+            <p>// Read four digits from the user<br /> Read digit1<br /> Read digit2<br /> Read digit3<br /> Read digit4</p>
+            <p>// Convert each digit to its corresponding character<br /> char1 = convertToCharacter(digit1)<br /> char2 = convertToCharacter(digit2)<br /> char3 = convertToCharacter(digit3)<br /> char4 = convertToCharacter(digit4)</p>
+            <p>// Display the characters with their corresponding digits<br /> Print digit1 + "-" + char1<br /> Print digit2 + "-" + char2<br /> Print digit3 + "-" + char3<br /> Print digit4 + "-" + char4</p>
+            <p>Function convertToCharacter(digit):<br /> // Convert the digit to its corresponding character<br /> character = ASCII_to_character(digit)<br /> return character</p>
+            <p>// Call the function to display characters<br />displayCharacters()</p>
+        </div>
+    </div>
+    <p><strong>4.Problem Statement &ndash;&nbsp;</strong>FOE college wants to recognize the department which has succeeded in getting the maximum number of placements for this academic year. The departments that have participated in the recruitment drive are CSE,ECE, MECH. Help the college find the department getting maximum placements. Check for all the possible output given in the sample snapshot</p>
+    <p><strong>Note :</strong>&nbsp;If any input is negative, the output should be &ldquo;Input is Invalid&rdquo;.&nbsp; If all department has equal number of placements, the output should be &ldquo;None of the department has got the highest placement&rdquo;.</p>
+    <p><strong>Sample Input 1:</strong></p>
+    <ul>
+        <li>Enter the no of students placed in CSE:90</li>
+        <li>Enter the no of students placed in ECE:45</li>
+        <li>Enter the no of students placed in MECH:70</li>
+    </ul>
+    <p><strong>Sample Output 1:</strong></p>
+    <ul>
+        <li>Highest placement</li>
+    </ul>
+    <p>CSE</p>
+    <p><strong>Sample Input 2:</strong></p>
+    <ul>
+        <li>Enter the no of students placed in CSE:55</li>
+        <li>Enter the no of students placed in ECE:85</li>
+        <li>Enter the no of students placed in MECH:85</li>
+    </ul>
+    <p><strong>Sample Output 2:</strong></p>
+    <ul>
+        <li>Highest placement</li>
+    </ul>
+    <p>ECE</p>
+    <p>MECH</p>
+    <p><strong>Sample Input 3:</strong></p>
+    <ul>
+        <li>Enter the no of students placed in CSE:0</li>
+        <li>Enter the no of students placed in ECE:0</li>
+        <li>Enter the no of students placed in MECH:0</li>
+    </ul>
+    <p><strong>Sample Output 3:</strong></p>
+    <ul>
+        <li>None of the department has got the highest placement</li>
+    </ul>
+    <p><strong>Sample Input 4:</strong></p>
+    <ul>
+        <li>Enter the no of students placed in CSE:10</li>
+        <li>Enter the no of students placed in ECE:-50</li>
+        <li>Enter the no of students placed in MECH:40</li>
+    </ul>
+    <p><strong>Sample Output 4:</strong></p>
+    <ul>
+        <li>Input is Invalid</li>
+    </ul>
+    <div style="text-align:center;">
+        <p ><button  id="myBtn3" style=" background-color: #78e39b;color: white; width:200px; height:50px; border: none; font-size:20px; ">SHOW ANSWER</button></p>
+    </div>
+    <div id="myModal3" class="modal3">
+        <div class="modal-content3">
+            <span class="close3">&times;</span>
+            <p>Function findMaxPlacementDepartment():<br /> // Prompt the user to enter the number of students placed in each department<br /> Print "Enter the no of students placed in CSE:"<br /> Read placedCSE<br /> Print "Enter the no of students placed in ECE:"<br /> Read placedECE<br /> Print "Enter the no of students placed in MECH:"<br /> Read placedMECH</p>
+            <p>// Check if any input is negative<br /> if placedCSE &lt; 0 or placedECE &lt; 0 or placedMECH &lt; 0:<br /> Print "Input is Invalid"<br /> return</p>
+            <p>// Find the maximum placements<br /> maxPlacement = max(placedCSE, placedECE, placedMECH)</p>
+            <p>// Check if all departments have equal placements<br /> if placedCSE == placedECE and placedECE == placedMECH:<br /> Print "None of the department has got the highest placement"<br /> return</p>
+            <p>// Print the departments with the maximum placements<br /> Print "Highest placement"<br /> if placedCSE == maxPlacement:<br /> Print "CSE"<br /> if placedECE == maxPlacement:<br /> Print "ECE"<br /> if placedMECH == maxPlacement:<br /> Print "MECH"</p>
+            <p>// Call the function to find the department with the maximum placements<br />findMaxPlacementDepartment()</p>
+        </div>
+    </div>
+    <p><strong>5.Problem Statement&nbsp; &ndash;&nbsp;</strong>In a theater, there is a discount scheme announced where one gets a 10% discount on the total cost of tickets when there is a bulk booking of more than 20 tickets, and a discount of 2% on the total cost of tickets if a special coupon card is submitted. Develop a program to find the total cost as per the scheme. The cost of the k class ticket is Rs.75 and q class is Rs.150. Refreshments can also be opted by paying an additional of Rs. 50 per member.</p>
+    <p><strong>Hint: k and q and You have to book minimum of 5 tickets and maximum of 40 at a time. If fails display &ldquo;Minimum of 5 and Maximum of 40 Tickets&rdquo;.&nbsp; If circle is given a value other than &lsquo;k&rsquo; or &lsquo;q&rsquo; the output should be &ldquo;Invalid Input&rdquo;.</strong></p>
+    <p><strong>The ticket cost should be printed exactly to two decimal places.</strong></p>
+    <p><strong>Sample Input 1:</strong></p>
+    <ul>
+        <li>Enter the no of ticket:35</li>
+        <li>Do you want refreshment:y</li>
+        <li>Do you have coupon code:y</li>
+        <li>Enter the circle:k</li>
+    </ul>
+    <p><strong>Sample Output 1:</strong></p>
+    <ul>
+        <li>Ticket cost:4065.25</li>
+    </ul>
+    <p><strong>Sample Input 2:</strong></p>
+    <ul>
+        <li>Enter the no of ticket:1</li>
+    </ul>
+    <p><strong>Sample Output 2:</strong></p>
+    <ul>
+        <li>Minimum of 5 and Maximum of 40 Tickets</li>
+    </ul>
+    <div style="text-align:center;">
+        <p ><button  id="myBtn4" style=" background-color: #78e39b;color: white; width:200px; height:50px; border: none; font-size:20px; ">SHOW ANSWER</button></p>
+    </div>
+    <div id="myModal4" class="modal4">
+        <div class="modal-content4">
+            <span class="close4">&times;</span>
+            <p>Function calculateTotalCost():<br /> // Prompt the user to enter the number of tickets<br /> Print "Enter the no of ticket:"<br /> Read numOfTickets</p>
+            <p>// Check if the number of tickets is within the valid range<br /> if numOfTickets &lt; 5 or numOfTickets &gt; 40:<br /> Print "Minimum of 5 and Maximum of 40 Tickets"<br /> return</p>
+            <p>// Prompt the user if they want refreshments<br /> Print "Do you want refreshment:y/n"<br /> Read refreshmentOption</p>
+            <p>// Prompt the user if they have a coupon code<br /> Print "Do you have coupon code:y/n"<br /> Read couponOption</p>
+            <p>// Prompt the user to enter the circle<br /> Print "Enter the circle:k/q"<br /> Read circleOption</p>
+            <p>// Calculate the ticket cost based on the circle<br /> if circleOption is not equal to 'k' and circleOption is not equal to 'q':<br /> Print "Invalid Input"<br /> return<br /> else if circleOption is 'k':<br /> ticketCost = 75.0<br /> else:<br /> ticketCost = 150.0</p>
+            <p>// Calculate the total cost of tickets without considering any discounts<br /> totalCost = numOfTickets * ticketCost</p>
+            <p>// Apply discounts if applicable<br /> if numOfTickets &gt; 20:<br /> totalCost = totalCost - (0.1 * totalCost)<br /> if couponOption is 'y':<br /> totalCost = totalCost - (0.02 * totalCost)</p>
+            <p>// Add refreshment cost if opted<br /> if refreshmentOption is 'y':<br /> totalCost = totalCost + (50 * numOfTickets)</p>
+            <p>// Print the total cost rounded to two decimal places<br /> Print "Ticket cost:" + totalCost rounded to 2 decimal places</p>
+            <p>// Call the function to calculate the total cost<br />calculateTotalCost()</p>
+        </div>
+    </div>
+</div>
+<script src="accjs.js"></script>
+</body>
+</html>

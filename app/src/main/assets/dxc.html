@@ -1,0 +1,369 @@
+<html>
+<head>
+    <link rel="stylesheet" href="accstyle.css">
+</head>
+<body>
+<div style="padding: 15px 15px 15px 15px;">
+    <p style="font-size: 30px; text-align: center;"><span style="color: #78e39b;"><strong>DXC</strong></span></p>
+    <p style="text-align: justify;">&nbsp;</p>
+    <p><strong>1.Problem statement:</strong>In an auditorium, the lighting system of N bulbs is placed in a row. Due to some technical fault in the power supply, only some of the bulbs remain ON and the rest of them go OFF. Due to this flaw in the network, the bulbs which are OFF are unable to work. So till the technical team finds the actual cause of the fault, the technical head Akshay makes some temporary arrangements for the OFF bulbs at a minimum cost. Akshay decides to connect all the OFF bulbs to the nearby ON bulbs so that the length of the cable used to connect them is minimum. He calculates the distance of the systems from the first system.</p>
+    <p>Write an algorithm to help Akshay find the minimum length of the cable used to turn all the bulbs ON.</p>
+    <p><strong>Input</strong></p>
+    <ul>
+        <li>The first line of the input consists of an integral num,&nbsp; representing the number of bulbs (N).</li>
+        <li>The second line consists of N space-separated integers representing the initial state of each bulb, ON(1) or OFF(0)</li>
+        <li>The last line consists of N space-separated integers representing the distance of the bulbs from the first bulb.</li>
+    </ul>
+    <p><strong>Output</strong></p>
+    <ul>
+        <li>Print an integer representing the minimum length of the cable used to turn all the bulbs ON.</li>
+    </ul>
+    <p><strong>Example</strong></p>
+    <ul>
+        <li><strong>Input:</strong>
+            <ul>
+                <li>3</li>
+                <li>1 0 0</li>
+                <li>1 5 6</li>
+            </ul>
+        </li>
+    </ul>
+    <ul>
+        <li>Output:
+            <ul>
+                <li>5</li>
+            </ul>
+        </li>
+    </ul>
+    <p><strong>Explanation:</strong></p>
+    <ul>
+        <li>Length of the cable required to connect the 2nd bulb to the 1st bulb =4</li>
+        <li>Length of the cable required to connect the 3rd bulb to the 2nd bulb =1</li>
+        <li>The total length of the cable = 5(4+1)</li>
+    </ul>
+    <p>So, the output is 5.</p>
+    <div style="text-align:center;">
+        <p ><button id="myBtn" style=" background-color: #78e39b;color: white; width:200px; height:50px; border: none; font-size:20px; ">SHOW ANSWER</button></p>
+    </div>
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Function minCableLength(N, bulbs, distances):</p>
+            <p>&nbsp;&nbsp;&nbsp; totalLength = 0</p>
+            <p>&nbsp;&nbsp;&nbsp; lastOnBulbPosition = -1</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;&nbsp;&nbsp; for i from 0 to N-1:</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if bulbs[i] == 1:&nbsp; // If the bulb is already ON</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if lastOnBulbPosition != -1:</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; totalLength = totalLength + distances[i] - distances[lastOnBulbPosition]</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; lastOnBulbPosition = i</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;&nbsp;&nbsp; return totalLength</p>
+            <p>&nbsp;</p>
+            <p>Input:</p>
+            <p>Read N from the user</p>
+            <p>Read bulbs from the user</p>
+            <p>Read distances from the user</p>
+            <p>&nbsp;</p>
+            <p>bulbs = convert bulbs to an integer array</p>
+            <p>distances = convert distances to an integer array</p>
+            <p>&nbsp;</p>
+            <p>totalLength = minCableLength(N, bulbs, distances)</p>
+            <p>Print totalLength</p>
+        </div>
+    </div>
+    <p><strong>2.Problem Ststement:</strong>Mayur is developing a game that has three levels in it. He wants to display the results after the successful completion of all the levels for this purpose he is using a function int giveResult(int s1, s2, s3), where s1, s2, and s3 are the score of every level. This function will return<strong>&nbsp;&ldquo;Good&rdquo;&nbsp;</strong>if the s1&lt;s2,&nbsp;<strong>&ldquo;Best&rdquo;</strong>&nbsp;if s1&gt;= s2 and s1&lt;=s3 and&nbsp;<strong>&ldquo;Can do better&rdquo;</strong>&nbsp;if s1&gt;s3. Can you help Mayur in developing that function</p>
+    <ul>
+        <li><strong>Input:</strong>
+            <ul>
+                <li>s1 : 10</li>
+                <li>s2 : 12</li>
+                <li>s3 : 15</li>
+            </ul>
+        </li>
+    </ul>
+    <ul>
+        <li><strong>Output :</strong>
+            <ul>
+                <li>Good</li>
+            </ul>
+        </li>
+    </ul>
+    <ul>
+        <li><strong>Explanation :</strong>
+            <ul>
+                <li>Since 10 is less than 12, hence&nbsp;<strong>&ldquo;Good&rdquo;</strong>&nbsp;is returned.</li>
+            </ul>
+        </li>
+    </ul>
+    <div style="text-align:center;">
+        <p ><button  id="myBtn1" style=" background-color: #78e39b;color: white; width:200px; height:50px; border: none; font-size:20px; ">SHOW ANSWER</button></p>
+    </div>
+    <div id="myModal1" class="modal1">
+        <div class="modal-content1">
+            <span class="close1">&times;</span>
+            <p>Function minCableLength(N, bulbs, distances):</p>
+            <p>&nbsp;&nbsp;&nbsp; totalLength = 0</p>
+            <p>&nbsp;&nbsp;&nbsp; lastOnBulbPosition = -1</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;&nbsp;&nbsp; for i from 0 to N-1:</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if bulbs[i] == 1:&nbsp; // If the bulb is already ON</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if lastOnBulbPosition != -1:</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; totalLength = totalLength + distances[i] - distances[lastOnBulbPosition]</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; lastOnBulbPosition = i</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;&nbsp;&nbsp; return totalLength</p>
+            <p>&nbsp;</p>
+            <p>Input:</p>
+            <p>Read N from the user</p>
+            <p>Read bulbs from the user</p>
+            <p>Read distances from the user</p>
+            <p>&nbsp;</p>
+            <p>bulbs = convert bulbs to an integer array</p>
+            <p>distances = convert distances to an integer array</p>
+            <p>&nbsp;</p>
+            <p>totalLength = minCableLength(N, bulbs, distances)</p>
+            <p>Print totalLength</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>Function giveResult(s1, s2, s3):</p>
+            <p>&nbsp;&nbsp;&nbsp; if s1 &lt; s2:</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return "Good"</p>
+            <p>&nbsp;&nbsp;&nbsp; else if s1 &gt;= s2 and s1 &lt;= s3:</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return "Best"</p>
+            <p>&nbsp;&nbsp;&nbsp; else:</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return "Can do better"</p>
+            <p>&nbsp;</p>
+            <p>Input:</p>
+            <p>Read s1 from the user</p>
+            <p>Read s2 from the user</p>
+            <p>Read s3 from the user</p>
+            <p>&nbsp;</p>
+            <p>result = giveResult(s1, s2, s3)</p>
+            <p>Print result</p>
+        </div>
+    </div>
+    <p><strong>3.Problem Statement:</strong>There are 3 Horses with different speeds(in m/s) in a horse race. The length of the Racing track is given by m meters. You have to calculate the minimum time (in secs.) the fastest horse will win the race.</p>
+    <p>&nbsp;</p>
+    <p><strong>Input</strong></p>
+    <ul>
+        <li>The first line of input consists of an integer &ndash;&nbsp;<em>Distance,&nbsp;</em>representing the length of the racing track.</li>
+        <li>The second line of the input consists of 3 space-separated integers representing the&nbsp; speeds of horses running in the race.</li>
+    </ul>
+    <p>&nbsp;</p>
+    <p><strong>Output</strong></p>
+    <ul>
+        <li>Print the minimum time required to complete the race.</li>
+    </ul>
+    <p>&nbsp;</p>
+    <p><strong>Note</strong>:</p>
+    <ul>
+        <li>Consider all arithmetic operations as integer operations</li>
+        <li>Computed values lie within the integer range.</li>
+    </ul>
+    <p>&nbsp;</p>
+    <p><strong>Example</strong></p>
+    <ul>
+        <li><strong>Input:</strong>
+            <ul>
+                <li>distance: 72</li>
+                <li>Speed of horse1: 8</li>
+                <li>Speed of horse2: 4</li>
+                <li>Speed of horse3: 6&nbsp;</li>
+            </ul>
+        </li>
+    </ul>
+    <p>&nbsp;</p>
+    <ul>
+        <li><strong>Output:</strong>
+            <ul>
+                <li>9</li>
+            </ul>
+        </li>
+    </ul>
+    <p>&nbsp;</p>
+    <p><strong>Explanation :</strong></p>
+    <p>Time is taken by three horses to finish the race are :</p>
+    <ul>
+        <li>Time of first horse = 72/8 = 9</li>
+        <li>Time of second horse = 72/4 = 18</li>
+        <li>Time of third horse = 72/6 = 12</li>
+    </ul>
+    <p>The minimum time is 9 secs. Thus, the output is 9</p>
+    <p>&nbsp;</p>
+    <p><strong>Sample Input</strong></p>
+    <ul>
+        <li>distance: 18
+            <ul>
+                <li>Speed of horse1 : 3</li>
+                <li>Speed of horse2: 9</li>
+                <li>Speed of horse3: 6</li>
+            </ul>
+        </li>
+    </ul>
+    <p>&nbsp;</p>
+    <ul>
+        <li><strong>Sample Output</strong>
+            <ul>
+                <li>2</li>
+            </ul>
+        </li>
+    </ul>
+    <div style="text-align:center;">
+        <p ><button  id="myBtn2" style=" background-color: #78e39b;color: white; width:200px; height:50px; border: none; font-size:20px; ">SHOW ANSWER</button></p>
+    </div>
+    <div id="myModal2" class="modal2">
+        <div class="modal-content2">
+            <span class="close2">&times;</span>
+            <p>&nbsp;</p>
+            <p>Function findMinimumTime(distance, speed1, speed2, speed3):</p>
+            <p>&nbsp;&nbsp;&nbsp; // Calculate the time taken by each horse to complete the race</p>
+            <p>&nbsp;&nbsp;&nbsp; time1 = distance / speed1</p>
+            <p>&nbsp;&nbsp;&nbsp; time2 = distance / speed2</p>
+            <p>&nbsp;&nbsp;&nbsp; time3 = distance / speed3</p>
+            <p>&nbsp;&nbsp;&nbsp;</p>
+            <p>&nbsp;&nbsp;&nbsp; // Find the minimum time among the three horses</p>
+            <p>&nbsp;&nbsp;&nbsp; minTime = min(time1, time2, time3)</p>
+            <p>&nbsp;&nbsp;&nbsp;</p>
+            <p>&nbsp;&nbsp;&nbsp; return minTime</p>
+            <p>&nbsp;</p>
+            <p>Input:</p>
+            <p>Read distance from the user</p>
+            <p>Read speed1 from the user</p>
+            <p>Read speed2 from the user</p>
+            <p>Read speed3 from the user</p>
+            <p>&nbsp;</p>
+            <p>// Call the function to find the minimum time</p>
+            <p>minTime = findMinimumTime(distance, speed1, speed2, speed3)</p>
+            <p>&nbsp;</p>
+            <p>// Print the minimum time required to complete the race</p>
+            <p>Print minTime</p>
+        </div>
+    </div>
+    <p><strong>4.Problem Statement:</strong>Chinese Government wants to build a secret message encryption algorithm to encrypt important messages before transmission. The algorithm will have a message along with two keys which will be required necessarily for encryption as well as decryption of the secret message. The formula to encrypt the code is given below:</p>
+    <ul>
+        <li>(((messagekey2 % 5)key1)%7000000001)</li>
+    </ul>
+    <p>Write an algorithm to Encrypt the Code.</p>
+    <p>&nbsp;</p>
+    <p><strong>Input</strong></p>
+    <ul>
+        <li>The input consists of three space-separated integers &ndash; Message, Key1, and Key2, representing the secret code, the first key value, and the second key-value, respectively.</li>
+    </ul>
+    <p>&nbsp;</p>
+    <p><strong>Output</strong></p>
+    <ul>
+        <li>Print an integer representing the code encrypted.</li>
+    </ul>
+    <p>&nbsp;</p>
+    <p><strong>Constraints</strong></p>
+    <ul>
+        <li>1&lt;= Message &lt;= 109</li>
+        <li>0 &lt;= Key1, Key2&lt;= 109</li>
+    </ul>
+    <p>&nbsp;</p>
+    <p><strong>Example</strong></p>
+    <ul>
+        <li><strong>Input</strong>
+            <ul>
+                <li>4</li>
+                <li>5</li>
+                <li>1</li>
+            </ul>
+        </li>
+    </ul>
+    <p>&nbsp;</p>
+    <ul>
+        <li><strong>Output</strong>
+            <ul>
+                <li>1024</li>
+            </ul>
+        </li>
+    </ul>
+    <div style="text-align:center;">
+        <p ><button  id="myBtn3" style=" background-color: #78e39b;color: white; width:200px; height:50px; border: none; font-size:20px; ">SHOW ANSWER</button></p>
+    </div>
+    <div id="myModal3" class="modal3">
+        <div class="modal-content3">
+            <span class="close3">&times;</span>
+            <p>Function encryptCode(message, key1, key2):</p>
+            <p>&nbsp;&nbsp;&nbsp; encryptedCode = (((message * key2) % 5) * key1) % 7000000001</p>
+            <p>&nbsp;&nbsp;&nbsp; return encryptedCode</p>
+            <p>&nbsp;</p>
+            <p>Input:</p>
+            <p>Read message from the user</p>
+            <p>Read key1 from the user</p>
+            <p>Read key2 from the user</p>
+            <p>&nbsp;</p>
+            <p>// Call the function to encrypt the code</p>
+            <p>encryptedCode = encryptCode(message, key1, key2)</p>
+            <p>&nbsp;</p>
+            <p>// Print the encrypted code</p>
+            <p>Print encryptedCode</p>
+        </div>
+    </div>
+    <p><strong>5.Problem Statement:</strong>A Monitor of the class wanted to take the attendance, so he circulated a blank page in the classroom asking students to write there student_Id. But some naughty students wrote their id multiple times to trouble the monitor. Monitor went to the teacher and reported the incident, the Teacher asked him to mark the absence of students whose id is repeated in the attendance sheet and give him the number of students with repeated id in the attendance sheet.&nbsp;</p>
+    <p><strong>Input</strong></p>
+    <ul>
+        <li>The input consists of a string representing the ids of students.</li>
+    </ul>
+    <p><strong>Output</strong></p>
+    <ul>
+        <li>Print an integer representing the count of characters that are not repeated in the string.</li>
+    </ul>
+    <p><strong>Note:&nbsp;</strong>Student id is nothing but an alphabet from a-z.</p>
+    <p><strong>Example:</strong></p>
+    <ul>
+        <li><strong>Input:</strong>
+            <ul>
+                <li>
+                    <p>ghygbvghyghnhjuhjumnj</p>
+                </li>
+            </ul>
+        </li>
+    </ul>
+    <ul>
+        <li><strong>Output:</strong>
+            <ul>
+                <li>3</li>
+            </ul>
+        </li>
+        <li><strong>Explanation:</strong>
+            <ul>
+                <li>As there are only 3 students whose ids are not repeating, i.e, d f g v c x and the students with ids repeating are a and s</li>
+            </ul>
+        </li>
+    </ul>
+    <div style="text-align:center;">
+        <p ><button  id="myBtn4" style=" background-color: #78e39b;color: white; width:200px; height:50px; border: none; font-size:20px; ">SHOW ANSWER</button></p>
+    </div>
+    <div id="myModal4" class="modal4">
+        <div class="modal-content4">
+            <span class="close4">&times;</span>
+            <p>Function countUniqueIds(ids):</p>
+            <p>&nbsp;&nbsp;&nbsp; Initialize a dictionary to store the frequency of each character</p>
+            <p>&nbsp;&nbsp;&nbsp; Initialize a variable to count unique characters (uniqueCount)</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;&nbsp;&nbsp; for each character in ids:</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Increment the frequency of the character in the dictionary</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;&nbsp;&nbsp; for each character in ids:</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; If the frequency of the character is 1:</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Increment uniqueCount</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;&nbsp;&nbsp; Return uniqueCount</p>
+            <p>&nbsp;</p>
+            <p>Input:</p>
+            <p>Read ids from the user</p>
+            <p>&nbsp;</p>
+            <p>// Call the function to count unique ids</p>
+            <p>uniqueCount = countUniqueIds(ids)</p>
+            <p>&nbsp;</p>
+            <p>// Print the count of unique ids</p>
+            <p>Print uniqueCount</p>
+        </div>
+    </div>
+</div>
+<script src="accjs.js"></script>
+</body>
+</html>
